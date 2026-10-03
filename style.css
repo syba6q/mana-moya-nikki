@@ -1,0 +1,354 @@
+/* ==========================================================
+   みんなのモヤモヤ解決辞典 トップページ
+   色・文字サイズはすべて tokens.css の変数を使う
+   ========================================================== */
+
+/* ---------- リセット ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+body, h1, h2, h3, p, ul, ol, figure { margin: 0; }
+ul, ol { padding: 0; list-style: none; }
+img { max-width: 100%; height: auto; display: block; }
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--color-green-strong); outline-offset: 2px; }
+
+/* ---------- 共通 ---------- */
+.container {
+  max-width: 1080px;
+  margin-inline: auto;
+  padding-inline: 20px;
+}
+
+.sp-only { display: none; }
+
+.section { padding-block: 80px; }
+
+.section__head {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.section__en {
+  font-size: var(--fs-h3);
+  font-weight: 700;
+  color: var(--text-brand);
+  letter-spacing: 0.12em;
+  line-height: var(--lh-heading);
+}
+.section__title {
+  margin-top: 8px;
+}
+.section__title::after {
+  content: "";
+  display: block;
+  width: 48px;
+  height: 4px;
+  margin: 16px auto 0;
+  border-radius: 2px;
+  background: var(--color-green-normal1);
+}
+
+.section__more {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+/* バッジ */
+.badge {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: var(--radius-btn);
+  font-size: var(--fs-small);
+  font-weight: 700;
+  line-height: 1.6;
+  color: var(--text-base);
+}
+.badge--category {
+  background: var(--color-green-weak);
+  border: 1px solid var(--color-green-normal2);
+}
+.badge--new {
+  background: var(--color-yellow-strong);
+  border: 1px solid var(--color-yellow-strong);
+}
+
+/* ---------- ヘッダー ---------- */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--color-white);
+  border-bottom: 1px solid var(--color-gray-normal);
+}
+.header__inner {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  min-height: 88px;
+}
+.header__logo img {
+  width: 192px; /* 4:1 → 高さ48px */
+}
+.header__nav {
+  margin-left: auto;
+}
+.header__menu {
+  display: flex;
+  gap: 32px;
+}
+.header__menu a {
+  font-weight: 700;
+  text-decoration: none;
+}
+.header__menu a:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--color-green-normal1);
+  text-decoration-thickness: 3px;
+  text-underline-offset: 6px;
+}
+.header__actions {
+  display: flex;
+  gap: 8px;
+}
+
+/* ---------- メインビジュアル ---------- */
+.mv {
+  position: relative;
+  overflow: hidden;
+  background: var(--color-green-weak); /* 画像が読み込まれるまでの下地 */
+  padding-block: 96px;
+}
+/* 背景画像: セクション全体に敷き、画面幅に合わせて切り抜く */
+.mv__bg {
+  position: absolute;
+  inset: 0;
+}
+.mv__bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.mv__inner {
+  position: relative;
+}
+/* テキストを読みやすくするための白パネル */
+.mv__panel {
+  max-width: 520px;
+  padding: 40px;
+  border: 1px solid var(--color-green-normal2);
+  border-radius: 12px;
+  background: var(--color-white);
+}
+.mv__title-accent {
+  color: var(--text-brand);
+}
+.mv__lead {
+  margin-top: 20px;
+}
+
+.mv__cta {
+  margin-top: 32px;
+}
+
+/* ---------- 新着のモヤモヤ ---------- */
+.post-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.post-card__link {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 24px;
+  border: 1px solid var(--color-green-normal2);
+  border-radius: 12px;
+  background: var(--color-white);
+  text-decoration: none;
+  box-shadow: 0 0 0 var(--color-green-normal2);
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+/* hover: カード全体が浮き上がり、下に影が出る */
+.post-card__link:hover,
+.post-card__link:focus-visible {
+  transform: translateY(-6px);
+  border-color: var(--color-green-normal1);
+  box-shadow: 0 6px 0 var(--color-green-normal2);
+}
+.post-card__link:hover .post-card__title,
+.post-card__link:focus-visible .post-card__title {
+  color: var(--text-brand);
+}
+@media (prefers-reduced-motion: reduce) {
+  .post-card__link { transition: none; }
+  .post-card__link:hover,
+  .post-card__link:focus-visible { transform: none; }
+}
+.post-card__labels {
+  display: flex;
+  gap: 8px;
+}
+.post-card__title {
+  margin-top: 12px;
+  transition: color 0.2s;
+}
+.post-card__text {
+  margin-top: 8px;
+  font-size: var(--fs-small);
+}
+.post-card__meta {
+  display: flex;
+  gap: 16px;
+  margin-top: auto;
+  padding-top: 16px;
+  font-size: var(--fs-small);
+}
+.post-card__like {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.icon-heart {
+  width: 16px;
+  height: 16px;
+  fill: var(--color-red-strong);
+}
+
+/* ---------- 使い方 ---------- */
+.steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.step {
+  padding: 32px 24px;
+  border: 1px solid var(--color-green-normal2);
+  border-radius: 12px;
+  text-align: center;
+}
+.step__num {
+  display: inline-block;
+  padding: 2px 14px;
+  border-radius: 999px;
+  background: var(--color-green-normal1);
+  font-size: var(--fs-small);
+  font-weight: 700;
+}
+.step__title {
+  margin-top: 16px;
+}
+.step__text {
+  margin-top: 12px;
+  text-align: left;
+}
+
+/* ---------- CTA ---------- */
+.cta {
+  background: var(--color-yellow-weak);
+  border-top: 1px solid var(--color-yellow-normal);
+  padding-block: 72px;
+}
+.cta__inner {
+  text-align: center;
+}
+.cta__text {
+  margin-top: 16px;
+}
+.cta__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+/* ---------- フッター ---------- */
+.footer {
+  background: var(--color-gray-weak);
+  border-top: 1px solid var(--color-gray-normal);
+  padding-block: 48px 32px;
+}
+.footer__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+.footer__logo img {
+  width: 160px;
+}
+.footer__menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 24px;
+  font-size: var(--fs-small);
+}
+.footer__menu a {
+  text-decoration: none;
+}
+.footer__menu a:hover {
+  text-decoration: underline;
+}
+
+/* ==========================================================
+   タブレット
+   ========================================================== */
+@media (max-width: 1023px) {
+  .post-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ==========================================================
+   スマホ
+   ========================================================== */
+@media (max-width: 767px) {
+  .container { padding-inline: 16px; }
+  .pc-only { display: none; }
+  .sp-only { display: inline; }
+
+  .section { padding-block: 56px; }
+  .section__head { margin-bottom: 32px; }
+
+  /* ヘッダー: 1段目 ロゴ＋ボタン、2段目 ナビ */
+  .header__inner {
+    flex-wrap: wrap;
+    gap: 0 12px;
+    min-height: 0;
+    padding-top: 8px;
+  }
+  .header__logo img { width: 144px; }
+  .header__actions { margin-left: auto; }
+  .header__nav {
+    order: 3;
+    width: 100%;
+    margin-left: 0;
+    border-top: 1px solid var(--color-gray-normal);
+    margin-top: 8px;
+  }
+  .header__menu {
+    justify-content: space-around;
+    gap: 0;
+  }
+  .header__menu a {
+    display: block;
+    padding: 8px 12px;
+    font-size: var(--fs-small);
+  }
+
+  /* 上に余白を広めに取り、背景画像が見えるようにする */
+  .mv { padding-block: 160px 24px; }
+  .mv__panel { padding: 24px; }
+  .mv__cta { width: 100%; }
+
+  .post-list,
+  .steps {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .post-card__link { padding: 20px; }
+
+  .cta { padding-block: 56px; }
+  .cta__text { text-align: left; }
+  .cta__buttons .btn { width: 100%; }
+}
