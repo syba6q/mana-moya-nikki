@@ -26,8 +26,22 @@ img {
   height: auto;
 }
 
+
 a {
   color: inherit;
+}
+
+p a:link {
+  color: var(--text-brand);
+  text-decoration: none;
+}
+
+p a:visited {
+  color: var(--text-bland-visited);
+}
+
+p a:hover {
+  text-decoration: underline;
 }
 
 .visually-hidden {
