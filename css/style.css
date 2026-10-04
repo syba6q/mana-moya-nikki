@@ -248,6 +248,141 @@ a {
   text-decoration: underline;
 }
 
+/* ---------- プロフィール ---------- */
+.page-head {
+  background: var(--color-yellow-weak);
+  text-align: center;
+}
+
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid var(--color-red-normal);
+  border-radius: 24px;
+  background: var(--color-white);
+  text-align: center;
+}
+
+.profile-card__icon {
+  border-radius: 50%;
+  border: 3px solid var(--color-beige-normal);
+}
+
+.profile-card__name {
+  margin-top: 16px;
+  font-size: var(--fs-h3);
+  font-weight: 700;
+  line-height: var(--lh-heading);
+}
+
+.profile-card__role {
+  margin: 4px 0 24px;
+}
+
+/* セクション見出し: 左の飾り線 */
+.profile-section__title {
+  margin-bottom: 24px;
+  padding-left: 16px;
+  border-left: 6px solid var(--color-red-strong);
+}
+
+.profile-section > p + p {
+  margin-top: 16px;
+}
+
+/* 基本情報 */
+.info {
+  margin: 32px 0 0;
+  border-top: 1px solid var(--color-gray-normal);
+}
+
+.info__row {
+  display: grid;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--color-gray-normal);
+}
+
+.info dt {
+  font-weight: 700;
+}
+
+.info dd {
+  margin: 0;
+}
+
+/* 基本情報の中の箇条書き（スキルなど） */
+.info .info__list {
+  margin-top: 0;
+}
+
+/* 趣味 */
+.hobby {
+  padding: 24px;
+  border-radius: 16px;
+  background: var(--color-red-weak);
+}
+
+.hobby h3 {
+  margin-bottom: 4px;
+}
+
+/* 得意なこと */
+.strengths {
+  display: flex;
+  flex-direction: column;
+}
+
+.check-list {
+  margin-top: 16px;
+}
+
+.check-list li {
+  position: relative;
+  padding-left: 24px;
+}
+
+.check-list li + li {
+  margin-top: 4px;
+}
+
+.check-list li::before {
+  content: "";
+  position: absolute;
+  top: 0.65em;
+  left: 4px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-green-normal1);
+}
+
+/* マナビ・モヤモヤ */
+.manamoya {
+  display: grid;
+  gap: 16px;
+  margin: 24px 0;
+}
+
+.manamoya__item {
+  padding: 20px 24px;
+  border-radius: 16px;
+}
+
+.manamoya__item h3 {
+  margin-bottom: 4px;
+}
+
+.manamoya__item--manabi {
+  background: var(--color-green-weak);
+  border: 2px solid var(--color-green-normal2);
+}
+
+.manamoya__item--moyamoya {
+  background: var(--color-yellow-normal);
+  border: 2px solid var(--color-beige-normal);
+}
+
 
 /* =========================================================
    PC（768px以上）
@@ -341,6 +476,53 @@ a {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 32px;
+  }
+
+  /* プロフィール: 左に人物カードを固定、右に本文 */
+  .page-head {
+    padding: 56px 40px;
+  }
+
+  .profile {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 64px;
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 72px 40px 96px;
+  }
+
+  .profile-card {
+    position: sticky;
+    top: 113px; /* ヘッダーの高さ + 余白 */
+    align-self: start;
+    padding: 32px 24px;
+  }
+
+  .profile-card__icon {
+    width: 160px;
+  }
+
+  .profile-section + .profile-section {
+    margin-top: 72px;
+  }
+
+  .info__row {
+    grid-template-columns: 120px 1fr;
+  }
+
+  .hobbies {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  .strengths {
+    gap: 24px;
+  }
+
+  .manamoya {
+    grid-template-columns: 1fr 1fr;
   }
 }
 
@@ -499,5 +681,45 @@ a {
   .section__more .btn,
   .contact .btn {
     width: 100%;
+  }
+
+  /* プロフィール: 人物カードを上に置いて縦積み */
+  .page-head {
+    padding: 32px 16px;
+  }
+
+  .profile {
+    padding: 32px 16px 64px;
+  }
+
+  .profile-card {
+    margin-bottom: 48px;
+    padding: 24px 20px;
+  }
+
+  .profile-card__icon {
+    width: 120px;
+  }
+
+  .profile-card .btn {
+    width: 100%;
+  }
+
+  .profile-section + .profile-section {
+    margin-top: 56px;
+  }
+
+  .info__row {
+    grid-template-columns: 80px 1fr;
+  }
+
+  .hobbies {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .strengths {
+    gap: 16px;
   }
 }
