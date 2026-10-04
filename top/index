@@ -25,7 +25,7 @@
       <nav class="pc-nav pc-only" aria-label="メインメニュー">
         <ul>
           <li><a href="top/index.html" aria-current="page">トップ</a></li>
-          <li><a href="list/index.html">記事一覧</a></li>
+          <li><a href="articles/index.html">記事一覧</a></li>
           <li><a href=profile/"index.html">プロフィール</a></li>
         </ul>
         <a class="btn btn--primary btn--s" href="#" data-contact>お仕事の相談をする</a>
@@ -44,7 +44,7 @@
     <nav class="sp-nav sp-only" id="sp-nav" aria-label="メインメニュー" hidden>
       <ul>
         <li><a href="top/index.html" aria-current="page">トップ</a></li>
-        <li><a href="list/index.html">記事一覧</a></li>
+        <li><a href="articles/index.html">記事一覧</a></li>
         <li><a href="profile/index.html">プロフィール</a></li>
       </ul>
     </nav>
