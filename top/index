@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>わたしのマナモヤ日記</title>
+  <meta name="description" content="Webディレクター・マーケターのSybaが、仕事の学びや日々の気づきを書きためているブログです。">
+  <link rel="icon" href="img/ロゴ1_1.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ヘッダー -->
+  <header class="header">
+    <div class="header__inner">
+      <a class="header__logo" href="index.html">
+        <img src="img/logo/ロゴ2_1.png" alt="わたしのマナモヤ日記" width="600" height="300">
+      </a>
+
+      <!-- PC用ナビ -->
+      <nav class="pc-nav pc-only" aria-label="メインメニュー">
+        <ul>
+          <li><a href="index.html" aria-current="page">トップ</a></li>
+          <li><a href="articles.html">記事一覧</a></li>
+          <li><a href="profile.html">プロフィール</a></li>
+        </ul>
+        <a class="btn btn--primary btn--s" href="#" data-contact>お仕事の相談をする</a>
+      </nav>
+
+      <!-- SP用メニューボタン -->
+      <button class="menu-btn sp-only" type="button" aria-expanded="false" aria-controls="sp-nav">
+        <span class="menu-btn__line"></span>
+        <span class="menu-btn__line"></span>
+        <span class="menu-btn__line"></span>
+        <span class="visually-hidden">メニュー</span>
+      </button>
+    </div>
+
+    <!-- SP用ナビ -->
+    <nav class="sp-nav sp-only" id="sp-nav" aria-label="メインメニュー" hidden>
+      <ul>
+        <li><a href="index.html" aria-current="page">トップ</a></li>
+        <li><a href="articles.html">記事一覧</a></li>
+        <li><a href="profile.html">プロフィール</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ヒーロー -->
+    <section class="hero">
+      <div class="hero__inner">
+        <div class="hero__text">
+          <h1 class="hero__title">日々の「マナビ」と「モヤモヤ」を、<br><span class="marker">ゆっくり書き残す場所。</span></h1>
+          <p class="hero__lead">WebディレクターのSybaです。<br class="pc-only">仕事で考えたことや試してみたことを、『わたしのマナモヤ日記』として書きためています。</p>
+          <div class="hero__actions">
+            <a class="btn btn--primary btn--l" href="#" data-contact>お仕事の相談をする</a>
+            <a class="btn btn--normal btn--l" href="articles.html">記事を読む</a>
+          </div>
+        </div>
+        <div class="hero__visual">
+          <img src="logo/img/キャラアイコン.png" alt="" width="2048" height="2048">
+        </div>
+      </div>
+    </section>
+
+    <!-- わたしについて -->
+    <section class="section section--red">
+      <div class="container">
+        <h2 class="section__title">わたしについて</h2>
+        <div class="about">
+          <img class="about__icon" src="logo/img/キャラアイコン.png" alt="Sybaのアイコン" width="2048" height="2048">
+          <div class="about__text">
+            <h3 class="about__name">Syba</h3>
+            <p>とあるWebサービス事業会社にて、Webディレクター兼企画職として、自社サービスの運営・商品開発に3年半ほど携わっています。</p>
+            <p>今は、Webや開発知識を身につけたく自分のペースで少しずつ勉強中。このサイトも練習を兼ねて制作しています。</p>
+            <p>日々、なるほど・こんなのものあるのかといった「マナビ（学び）」や、そのとき消化しきれなかった・どうするべきなんだろうといった「モヤモヤ（悩み）」を自分で再消化・吸収するための場として、『わたしのマナモヤ日記』というブログサイトを作り始めました。</p>
+            <a class="btn btn--normal btn--m" href="profile.html">プロフィールを見る</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- できること -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section__title">わたしにできること</h2>
+        <ul class="skills">
+          <li class="skill">
+            <span class="skill__num" aria-hidden="true">01</span>
+            <h3>LP・Web制作・サイト改善ディレクション</h3>
+            <p>構成づくりから、デザイナー・エンジニアとのやりとり、リリース後の振り返り・効果検証のレポート、次の施策提案まで進めます。</p>
+          </li>
+          <li class="skill">
+            <span class="skill__num" aria-hidden="true">02</span>
+            <h3>SEO・データ分析</h3>
+            <p>Google Search ConsoleやAhrefsのデータをもとに、検索流入の現状整理や改善の優先順位づけを提案します。単純な現状整理・改善ポイント出しにとどまらず、商品・事業理解を踏まえた戦略提案をします。</p>
+          </li>
+          <li class="skill">
+            <span class="skill__num" aria-hidden="true">03</span>
+            <h3>業務デザイン＆業務ツール作成提供</h3>
+            <p>業務状況や改善したいポイントの整理・ヒアリングから、業務の設計・デザインをお手伝いいたします。必要に応じて、業務ツールを自作し提供することも可能です。</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 新着記事 -->
+    <section class="section section--gray">
+      <div class="container">
+        <h2 class="section__title">新着記事</h2>
+        <!-- js/articles.js の記事から新しい順に3件を表示 -->
+        <ul class="cards" id="latest-articles"></ul>
+        <div class="section__more">
+          <a class="btn btn--normal btn--m" href="articles.html">記事一覧へ</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 問い合わせ -->
+    <section class="section section--beige">
+      <div class="container contact">
+        <h2 class="section__title">お仕事のご相談</h2>
+        <p>Webサイトの改善やデータ分析、業務の自動化などのご相談をお待ちしています。<br class="pc-only">まだ内容が固まっていない段階でも、「まずは整理したい」「相談から始めたい」という方もお気軽にご連絡ください。</p>
+        <a class="btn btn--primary btn--l" href="#" data-contact>お仕事の相談をする</a>
+        <p class="text-small">Googleフォームが開きます。</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- フッター -->
+  <footer class="footer">
+    <ul class="footer__nav">
+      <li><a href="index.html">トップ</a></li>
+      <li><a href="articles.html">記事一覧</a></li>
+      <li><a href="profile.html">プロフィール</a></li>
+    </ul>
+    <small>&copy; 2026 わたしのマナモヤ日記</small>
+  </footer>
+
+  <script src="js/articles.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
