@@ -39,19 +39,18 @@ a {
   white-space: nowrap;
 }
 
-.strong-positive { 
-  font-weight: 700 !important;
-  color: --color-red-strong !important;
-}
-
-.strong-negative { 
-  font-weight: 700 !important;
-  color: --color-green-normal1 !important;
-}
-
 /* マーカー */
 .marker {
   background: linear-gradient(transparent 60%, var(--color-yellow-strong) 60%);
+}
+
+.strong-positive { 
+  background: linear-gradient(transparent 60%, var(--color-red-strong) 60%);
+}
+
+.strong-negative { 
+  background: linear-gradient(transparent 60%, var(--color-green-normal1) 60%);
+
 }
 
 /* ---------- ヘッダー ---------- */
