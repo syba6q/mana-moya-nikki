@@ -45,11 +45,11 @@ a {
 }
 
 .strong-positive { 
-  background: linear-gradient(transparent 60%, var(--color-red-strong) 60%);
+  background: linear-gradient(transparent 60%, var(--color-red-normal) 60%);
 }
 
 .strong-negative { 
-  background: linear-gradient(transparent 60%, var(--color-green-normal1) 60%);
+  background: linear-gradient(transparent 60%, var(--color-green-normal2) 60%);
 
 }
 
