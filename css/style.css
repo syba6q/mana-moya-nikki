@@ -40,13 +40,13 @@ a {
 }
 
 .strong-positive { 
-  font-weight: 700;
-  color: --color-red-strong;
+  font-weight: 700 !important;
+  color: --color-red-strong !important;
 }
 
 .strong-negative { 
-  font-weight: 700;
-  color: --color-green-normal1;
+  font-weight: 700 !important;
+  color: --color-green-normal1 !important;
 }
 
 /* マーカー */
