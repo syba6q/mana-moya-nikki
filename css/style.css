@@ -343,7 +343,7 @@ p a:hover {
 .hobby {
   padding: 24px;
   border-radius: 16px;
-  background: var(--color-red-weak);
+  border: 2px solid var(--color-beige-strong);
 }
 
 .hobby h3 {
