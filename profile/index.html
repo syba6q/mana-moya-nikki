@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>プロフィール｜わたしのマナモヤ日記</title>
+  <meta name="description" content="『わたしのマナモヤ日記』を書いているSybaのプロフィールです。得意なことや、このサイトを作った背景を紹介しています。">
+  <link rel="icon" href="../img/logo/ロゴ1_1.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/tokens.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ヘッダー -->
+  <header class="header">
+    <div class="header__inner">
+      <a class="header__logo" href="../top/index.html">
+        <img src="../img/logo/ロゴ2_1.png" alt="わたしのマナモヤ日記" width="600" height="300">
+      </a>
+
+      <!-- PC用ナビ -->
+      <nav class="pc-nav pc-only" aria-label="メインメニュー">
+        <ul>
+          <li><a href="../top/index.html">トップ</a></li>
+          <li><a href="../articles/index.html">記事一覧</a></li>
+          <li><a href="index.html" aria-current="page">プロフィール</a></li>
+        </ul>
+        <a class="btn btn--primary btn--s" href="#" data-contact>お仕事の相談をする</a>
+      </nav>
+
+      <!-- SP用メニューボタン -->
+      <button class="menu-btn sp-only" type="button" aria-expanded="false" aria-controls="sp-nav">
+        <span class="menu-btn__line"></span>
+        <span class="menu-btn__line"></span>
+        <span class="menu-btn__line"></span>
+        <span class="visually-hidden">メニュー</span>
+      </button>
+    </div>
+
+    <!-- SP用ナビ -->
+    <nav class="sp-nav sp-only" id="sp-nav" aria-label="メインメニュー" hidden>
+      <ul>
+        <li><a href="../top/index.html">トップ</a></li>
+        <li><a href="../articles/index.html">記事一覧</a></li>
+        <li><a href="index.html" aria-current="page">プロフィール</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ページタイトル -->
+    <div class="page-head">
+      <h1>プロフィール</h1>
+    </div>
+
+    <div class="profile">
+
+      <!-- 人物カード（PCでは左に固定） -->
+      <aside class="profile-card">
+        <img class="profile-card__icon" src="../img/logo/キャラアイコン.png" alt="Sybaのアイコン" width="2048" height="2048">
+        <p class="profile-card__name">Syba</p>
+        <p class="profile-card__role text-small">Webディレクター・企画職</p>
+        <a class="btn btn--primary btn--m" href="#" data-contact>お仕事の相談をする</a>
+      </aside>
+
+      <div class="profile__main">
+
+        <!-- 自己紹介 -->
+        <section class="profile-section">
+          <h2 class="profile-section__title">自己紹介</h2>
+          <p>とあるWebサービス事業会社で、Webディレクター兼企画職として、自社サービスの運営・商品開発に3年半ほど携わっています。</p>
+          <p>今は、Webや開発の知識を身につけたくて、自分のペースで少しずつ勉強中です。このサイトも練習を兼ねて制作しています。</p>
+          <dl class="info">
+            <div class="info__row">
+              <dt>名前</dt>
+              <dd>Syba</dd>
+            </div>
+            <div class="info__row">
+              <dt>仕事</dt>
+              <dd>Webディレクター・企画職</dd>
+            </div>
+            <div class="info__row">
+              <dt>経験</dt>
+              <dd>Webサービス事業会社で約3年半従事。<br>Webディレクション・Webマーケティング・業務デザイン／設計・AI推進などを幅広く兼任で経験。
+              </dd>
+            </div>
+            <div class="info__row">
+              <dt>モットー</dt>
+              <dd>
+                <ul class="check-list info__list">
+                  <li>自分が一番の専門家になるつもりでやる。</li>
+                  <li>わからなくても何か見えるまで動き続ける。</li>
+                </ul>
+              </dd>
+            </div>
+            <div class="info__row">
+              <dt>スキル</dt>
+              <dd>
+                <ul class="check-list info__list">
+                  <li>GA4</li>
+                  <li>Google Search Console</li>
+                  <li>Google Apps Script</li>
+                  <li>Google Spread Sheet</li>
+                  <li>リスティング広告運用</li>
+                  <li>MySQL</li>
+                  <li>Figma</li>
+                  <li>ワークフローツールの使用（n8n, Google WorkFlows）</li>
+                  <li>フロントエンドの簡単な開発（HTML/CSS,JavaScript）</li>
+                </ul>
+              </dd>
+            </div>
+            <div class="info__row">
+              <dt>勉強中</dt>
+              <dd>Web・開発の知識。自分で作る経験をして『<b>活きた知識</b>』として身につくよう目指しています。</dd>
+            </div>
+          </dl>
+        </section>
+
+        <!-- 趣味（仮テキスト。本人が差し替える） -->
+        <section class="profile-section">
+          <h2 class="profile-section__title">趣味</h2>
+          <ul class="hobbies">
+            <li class="hobby">
+              <h3>Youtube鑑賞</h3>
+              <p class="text-small">『<a href="https://www.youtube.com/c/quizknock" target="_blank">QuizKnock</a>』さんや『<a href="https://www.youtube.com/@yurucom" target="_blank">ゆるコンピュータ科学ラジオ</a>』さんが好きで、よく作業のお供に聞いています。<br>そのほかだと、自分が携わるサービスのクライアント様の業界を知れるようなニュースやドキュメンタリーを見たりを楽しんでいます。</p>
+            </li>
+            <li class="hobby">
+              <h3>ダンス・パフォーマンス鑑賞</h3>
+              <p class="text-small">ダンスやステージパフォーマンス、舞台作品を見るのが大好きです！<br>（最近は、Da-iceにお熱です…）</p>
+            </li>
+            <li class="hobby">
+              <h3>コーヒー・紅茶</h3>
+              <p class="text-small">コーヒーと紅茶が大好きで、一緒にその飲み物に合うお菓子やパンを探し求めるのも大好きです。出先でおいしい・かわいらしいカフェやベーカリーなどを見るとつい入ってしまいます…。</p>
+            </li>
+          </ul>
+        </section>
+
+        <!-- 得意なこと -->
+        <section class="profile-section">
+          <h2 class="profile-section__title">得意なこと</h2>
+          <ul class="strengths">
+            <li class="skill">
+              <span class="skill__num" aria-hidden="true">01</span>
+              <h3>LP・Web制作・サイト改善ディレクション</h3>
+              <p>LPやWebサイトの制作・改善を、企画から公開後の振り返りまで一貫して進めます。</p>
+              <ul class="check-list">
+                <li>ページの構成づくり</li>
+                <li>デザイナー・エンジニアとのやりとり</li>
+              　<li>ABテストのテスト設計・効果検証</li>
+                <li>リリース後の振り返りレポート</li>
+                <li>結果をふまえた次の施策の提案</li>
+              </ul>
+            </li>
+            <li class="skill">
+              <span class="skill__num" aria-hidden="true">02</span>
+              <h3>SEO・データ分析</h3>
+              <p>現状整理や改善ポイント出しだけでなく、商品・事業への理解をふまえた戦略まで提案します。</p>
+              <ul class="check-list">
+                <li>Google Search Console・Ahrefsのデータをもとにした検索流入の現状整理</li>
+                <li>改善の優先順位づけ</li>
+                <li>商品・事業理解をふまえた戦略提案</li>
+              </ul>
+            </li>
+            <li class="skill">
+              <span class="skill__num" aria-hidden="true">03</span>
+              <h3>業務デザイン＆業務ツール作成提供</h3>
+              <p>いまの業務の状況を整理するところから、業務の設計・デザインをお手伝いします。</p>
+              <ul class="check-list">
+                <li>業務状況や改善したいポイントのヒアリング・整理</li>
+                <li>業務の設計・デザイン</li>
+                <li>必要に応じた業務ツールの自作・提供</li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+
+        <!-- 作った背景 -->
+        <section class="profile-section">
+          <h2 class="profile-section__title">『わたしのマナモヤ日記』を作った背景</h2>
+          <p>仕事や私生活を過ごしていると、「なるほど」「こんなものもあるのか」と思える学びがある一方で、その場では消化しきれずに「どうするべきだったんだろう」と引っかかったままのことも出てきます。</p>
+          <div class="manamoya">
+            <div class="manamoya__item manamoya__item--manabi">
+              <h3>マナビ（学び）</h3>
+              <p class="text-small">「なるほど！」「わかった！」「初めて知った！」「これ思いついた！」</p>
+            </div>
+            <div class="manamoya__item manamoya__item--moyamoya">
+              <h3>モヤモヤ（悩み）</h3>
+              <p class="text-small">「どうしたらいいんだろう」「なんだかイヤだったな」「どう進めるのがいいんだろう」</p>
+            </div>
+          </div>
+          <p>この2つを書き残して、あとから自分で読み返し、もう一度考えて吸収するための場所として『<b>わたしのマナモヤ日記</b>』を作り始めました。</p>
+          <p>あわせて、Webや開発の勉強の練習として、サイトの制作そのものにも取り組んでいます。</p>
+        </section>
+
+      </div>
+    </div>
+
+    <!-- 問い合わせ -->
+    <section class="section section--beige">
+      <div class="container contact">
+        <h2 class="section__title">お仕事のご相談</h2>
+        <p>Webサイトの改善やデータ分析、業務の自動化などのご相談をお待ちしています。<br class="pc-only">まだ内容が固まっていない段階でも、「まずは整理したい」「相談から始めたい」という方もお気軽にご連絡ください。</p>
+        <a class="btn btn--primary btn--l" href="#" data-contact>お仕事の相談をする</a>
+        <p class="text-small">Googleフォームが開きます。</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- フッター -->
+  <footer class="footer">
+    <ul class="footer__nav">
+      <li><a href="../top/index.html">トップ</a></li>
+      <li><a href="../articles/index.html">記事一覧</a></li>
+      <li><a href="index.html">プロフィール</a></li>
+    </ul>
+    <small>&copy; 2026 わたしのマナモヤ日記</small>
+  </footer>
+
+  <script src="articles.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
