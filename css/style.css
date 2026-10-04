@@ -39,6 +39,16 @@ a {
   white-space: nowrap;
 }
 
+.strong-positive { 
+  font-weight: 700;
+  color: --color-red-strong;
+}
+
+.strong-negative { 
+  font-weight: 700;
+  color: --color-green-normal1;
+}
+
 /* マーカー */
 .marker {
   background: linear-gradient(transparent 60%, var(--color-yellow-strong) 60%);
