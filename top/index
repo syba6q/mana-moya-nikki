@@ -9,8 +9,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/tokens.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="top/tokens.css">
+  <link rel="stylesheet" href="top/style.css">
 </head>
 <body>
 
@@ -114,7 +114,7 @@
     <section class="section section--gray">
       <div class="container">
         <h2 class="section__title">新着記事</h2>
-        <!-- js/articles.js の記事から新しい順に3件を表示 -->
+        
         <ul class="cards" id="latest-articles"></ul>
         <div class="section__more">
           <a class="btn btn--normal btn--m" href="articles.html">記事一覧へ</a>
@@ -144,7 +144,7 @@
     <small>&copy; 2026 わたしのマナモヤ日記</small>
   </footer>
 
-  <script src="js/articles.js"></script>
-  <script src="js/main.js"></script>
+  <script src="top/articles.js"></script>
+  <script src="top/main.js"></script>
 </body>
 </html>
