@@ -1,0 +1,132 @@
+:root {
+  /* Main Color */
+  --color-red-weak: #FFEAE7;
+  --color-red-normal: #FFBEB5;
+  --color-red-strong: #EC7464;
+  --color-yellow-weak: #FFFDEE;
+  --color-yellow-normal: #FFF8C2;
+  --color-yellow-strong: #FFE942;
+
+  /* Accent Color */
+  --color-green-weak: #E7FDFF;
+  --color-green-normal2: #BBEEF4;
+  --color-green-normal1: #22A0BD;
+
+  /* Sub Color */
+  --color-gray-weak: #F8F8F8;
+  --color-gray-normal: #EDEDED;
+  --color-gray-strong: #D0D0D0;
+  --color-beige-weak: #FCE9DB;
+  --color-beige-normal: #E1BCA1;
+  --color-beige-strong: #B28666;
+
+  --color-white: #FFFFFF;
+
+  /* フォントカラー */
+  --text-base: #4C4C4C;
+  --text-inverse: #FFFFFF;
+  --text-accent: #EC7464;
+  --text-brand: #22A0BD;
+
+  /* ボタン専用色 */
+  --btn-primary: #E05441;
+  --btn-primary-hover: #A41805;
+  --btn-secondary: #0088BA;
+  --btn-secondary-hover: #00516E;
+  --btn-normal-hover: #EBEBEB;
+  --btn-border: #D0D0D0;
+  --btn-border-hover: rgba(208, 208, 208, 0.82);
+
+  /* フォントサイズ */
+  --fs-small: 14px;
+  --fs-body: 16px;
+  --fs-h3: 18px;
+  --fs-h2: 24px;
+  --fs-h1: 32px;
+  --fs-btn-s: 12px;
+  --fs-btn-m: 16px;
+  --fs-btn-l: 22px;
+
+  /* フォント */
+  --font-base: "M PLUS Rounded 1c", "Hiragino Maru Gothic ProN", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  --lh-body: 1.8;
+  --lh-heading: 1.4;
+
+  /* 角丸 */
+  --radius-btn: 5px;
+}
+
+@media (max-width: 767px) {
+  :root {
+    --fs-h2: 22px;
+    --fs-h1: 26px;
+  }
+}
+
+/* ---------- ベース ---------- */
+body {
+  font-family: var(--font-base);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  letter-spacing: 0.04em;
+  color: var(--text-base);
+  background: var(--color-white);
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+  line-height: var(--lh-heading);
+}
+h1 { font-size: var(--fs-h1); }
+h2 { font-size: var(--fs-h2); }
+h3 { font-size: var(--fs-h3); }
+
+small, .text-small { font-size: var(--fs-small); }
+
+/* ---------- ボタン ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  box-sizing: border-box;
+  border: none;
+  border-radius: var(--radius-btn);
+  font-family: inherit;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+/* サイズ: 高さ = line-height + 上下padding（S 35px / M 49px / L 57px） */
+.btn--s { padding: 10px 20px; font-size: var(--fs-btn-s); line-height: 15px; }
+.btn--m { padding: 15px 30px; font-size: var(--fs-btn-m); line-height: 19px; }
+.btn--l { padding: 15px 30px; font-size: var(--fs-btn-l); line-height: 27px; }
+
+/* 色 */
+.btn--primary   { background: var(--btn-primary);   color: var(--text-inverse); }
+.btn--secondary { background: var(--btn-secondary); color: var(--text-inverse); }
+.btn--normal    { background: var(--color-white);   color: var(--text-base); border: 1px solid var(--btn-border); }
+
+/* normalは枠線1px分paddingを減らし、ほかの2種類と同じ高さにする（Figmaのborder-boxと同じ） */
+.btn--normal.btn--s { padding: 9px 19px; }
+.btn--normal.btn--m,
+.btn--normal.btn--l { padding: 14px 29px; }
+
+/* hover */
+.btn--primary:hover   { background: var(--btn-primary-hover); }
+.btn--secondary:hover { background: var(--btn-secondary-hover); }
+.btn--normal:hover    { background: var(--btn-normal-hover); border-color: var(--btn-border-hover); }
+
+/* disabled: 通常デザインのまま透明度60% */
+.btn:disabled,
+.btn[aria-disabled="true"] {
+  opacity: 0.6;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+.btn--primary:disabled,   .btn--primary[aria-disabled="true"]   { background: var(--btn-primary); }
+.btn--secondary:disabled, .btn--secondary[aria-disabled="true"] { background: var(--btn-secondary); }
+.btn--normal:disabled,    .btn--normal[aria-disabled="true"]    { background: var(--color-white); border-color: var(--btn-border); }
