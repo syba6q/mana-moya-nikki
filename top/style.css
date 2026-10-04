@@ -1,0 +1,503 @@
+/* =========================================================
+   共通
+   ========================================================= */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+h1, h2, h3, p, ul {
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* マーカー */
+.marker {
+  background: linear-gradient(transparent 60%, var(--color-yellow-strong) 60%);
+}
+
+/* ---------- ヘッダー ---------- */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--color-white);
+  border-bottom: 1px solid var(--color-gray-normal);
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.header__logo img {
+  width: auto;
+}
+
+/* ---------- ヒーロー ---------- */
+.hero {
+  background: var(--color-yellow-weak);
+}
+
+.hero__title {
+  margin-bottom: 24px;
+}
+
+.hero__lead {
+  margin-bottom: 32px;
+}
+
+.hero__actions {
+  display: flex;
+  gap: 16px;
+}
+
+.hero__visual img {
+  border-radius: 50%;
+  background: var(--color-white);
+  border: 4px solid var(--color-beige-normal);
+}
+
+/* ---------- セクション共通 ---------- */
+.section--red   { background: var(--color-red-weak); }
+.section--gray  { background: var(--color-gray-weak); }
+.section--beige { background: var(--color-beige-weak); }
+
+.container {
+  margin: 0 auto;
+}
+
+.section__title {
+  text-align: center;
+}
+
+/* 見出し下の飾り線 */
+.section__title::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 4px;
+  margin: 12px auto 0;
+  border-radius: 2px;
+  background: var(--color-red-strong);
+}
+
+.section__more {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+/* ---------- わたしについて ---------- */
+.about {
+  display: flex;
+  background: var(--color-white);
+  border-radius: 24px;
+}
+
+.about__icon {
+  flex-shrink: 0;
+  border-radius: 50%;
+  border: 3px solid var(--color-red-normal);
+}
+
+.about__name {
+  margin-bottom: 8px;
+}
+
+.about__text p {
+  margin-bottom: 16px;
+}
+
+.about__text .btn {
+  margin-top: 8px;
+}
+
+/* ---------- できること ---------- */
+.skill {
+  padding: 32px 24px;
+  border: 2px solid var(--color-green-normal2);
+  border-radius: 16px;
+  background: var(--color-white);
+}
+
+.skill__num {
+  display: block;
+  margin-bottom: 8px;
+  font-size: var(--fs-h2);
+  font-weight: 700;
+  line-height: var(--lh-heading);
+  color: var(--text-brand); /* 24px以上の太字なので使用可 */
+}
+
+.skill h3 {
+  margin-bottom: 12px;
+}
+
+/* ---------- 記事カード ---------- */
+.card {
+  display: block;
+  height: 100%;
+  overflow: hidden;
+  border: 1px solid var(--color-red-normal);
+  border-radius: 16px;
+  background: var(--color-white);
+  text-decoration: none;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.card__thumb {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+.card__thumb--placeholder {
+  background: var(--color-gray-normal);
+}
+
+.card__body {
+  padding: 20px;
+}
+
+.card__meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.badge {
+  padding: 2px 12px;
+  border-radius: 999px;
+  background: var(--color-red-normal);
+  font-size: var(--fs-small);
+}
+
+.card__title {
+  margin-bottom: 8px;
+}
+
+/* ---------- 問い合わせ ---------- */
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  text-align: center;
+}
+
+.contact .text-small {
+  margin-top: -12px;
+}
+
+/* ---------- フッター ---------- */
+.footer {
+  padding: 40px 16px;
+  border-top: 4px solid var(--color-red-normal);
+  text-align: center;
+}
+
+.footer__nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px 32px;
+  margin-bottom: 16px;
+}
+
+.footer__nav a {
+  text-decoration: none;
+}
+
+.footer__nav a:hover {
+  text-decoration: underline;
+}
+
+
+/* =========================================================
+   PC（768px以上）
+   ========================================================= */
+@media (min-width: 768px) {
+  .sp-only {
+    display: none !important;
+  }
+
+  /* ヘッダー */
+  .header__inner {
+    max-width: 1120px;
+    padding: 12px 40px;
+  }
+
+  .header__logo img {
+    height: 64px;
+  }
+
+  .pc-nav {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+
+  .pc-nav ul {
+    display: flex;
+    gap: 32px;
+  }
+
+  .pc-nav ul a {
+    text-decoration: none;
+    font-weight: 700;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+  }
+
+  .pc-nav ul a:hover,
+  .pc-nav ul a[aria-current="page"] {
+    border-bottom-color: var(--color-red-strong);
+  }
+
+  /* ヒーロー: 左テキスト・右キャラの2カラム */
+  .hero__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 64px;
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 96px 40px;
+  }
+
+  .hero__visual img {
+    width: 360px;
+  }
+
+  /* セクション */
+  .section {
+    padding: 96px 40px;
+  }
+
+  .container {
+    max-width: 1040px;
+  }
+
+  .section__title {
+    margin-bottom: 56px;
+  }
+
+  /* わたしについて */
+  .about {
+    align-items: center;
+    gap: 48px;
+    padding: 48px 56px;
+  }
+
+  .about__icon {
+    width: 200px;
+  }
+
+  /* できること: 3カラム */
+  .skills {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+
+  /* 記事: 3カラム */
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+}
+
+
+/* =========================================================
+   SP（767px以下）
+   ========================================================= */
+@media (max-width: 767px) {
+  .pc-only {
+    display: none !important;
+  }
+
+  /* ヘッダー */
+  .header__inner {
+    padding: 8px 16px;
+  }
+
+  .header__logo img {
+    height: 48px;
+  }
+
+  .menu-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+    width: 44px;
+    height: 44px;
+    padding: 10px;
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+
+  .menu-btn__line {
+    display: block;
+    height: 2px;
+    border-radius: 1px;
+    background: var(--text-base);
+    transition: transform 0.2s, opacity 0.2s;
+  }
+
+  .menu-btn[aria-expanded="true"] .menu-btn__line:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .menu-btn[aria-expanded="true"] .menu-btn__line:nth-child(2) {
+    opacity: 0;
+  }
+  .menu-btn[aria-expanded="true"] .menu-btn__line:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .sp-nav {
+    border-top: 1px solid var(--color-gray-normal);
+  }
+
+  .sp-nav a {
+    display: block;
+    padding: 16px;
+    border-bottom: 1px solid var(--color-gray-normal);
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .sp-nav a[aria-current="page"] {
+    background: var(--color-red-weak);
+  }
+
+  /* ヒーロー: キャラを上、テキストを下に縦積み */
+  .hero__inner {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 24px;
+    padding: 40px 16px 56px;
+  }
+
+  .hero__visual img {
+    width: 180px;
+  }
+
+  .hero__title {
+    text-align: center;
+  }
+
+  .hero__actions {
+    flex-direction: column;
+  }
+
+  .hero__actions .btn {
+    width: 100%;
+  }
+
+  /* セクション */
+  .section {
+    padding: 64px 16px;
+  }
+
+  .section__title {
+    margin-bottom: 32px;
+  }
+
+  /* わたしについて: アイコンを上に置いて中央寄せ */
+  .about {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding: 32px 20px;
+  }
+
+  .about__icon {
+    width: 120px;
+  }
+
+  .about__name {
+    text-align: center;
+  }
+
+  .about__text .btn {
+    width: 100%;
+  }
+
+  /* できること: 1カラム */
+  .skills {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  /* 記事: 横並びの小さいカード（サムネ左・テキスト右） */
+  .cards {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .card {
+    display: flex;
+  }
+
+  .card__thumb {
+    flex-shrink: 0;
+    width: 112px;
+    aspect-ratio: auto;
+    min-height: 100%;
+  }
+
+  .card__body {
+    padding: 12px 16px;
+  }
+
+  .card__excerpt {
+    display: none;
+  }
+
+  .section__more .btn,
+  .contact .btn {
+    width: 100%;
+  }
+}
