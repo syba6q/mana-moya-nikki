@@ -3,7 +3,9 @@
 
 ## サイト構成（仮）
 ※作りたい順番
-- トップページ
-- 詳細ページ
-- 一覧ページ
-- 投稿フォーム
+- top
+  - https://syba6q.github.io/mana-moya-nikki/top/index.html
+- profile
+- article/detail
+- articles
+- offer
