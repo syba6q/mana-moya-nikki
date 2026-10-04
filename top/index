@@ -17,16 +17,16 @@
   <!-- ヘッダー -->
   <header class="header">
     <div class="header__inner">
-      <a class="header__logo" href="index.html">
+      <a class="header__logo" href="top/index.html">
         <img src="img/logo/ロゴ2_1.png" alt="わたしのマナモヤ日記" width="600" height="300">
       </a>
 
       <!-- PC用ナビ -->
       <nav class="pc-nav pc-only" aria-label="メインメニュー">
         <ul>
-          <li><a href="index.html" aria-current="page">トップ</a></li>
-          <li><a href="articles.html">記事一覧</a></li>
-          <li><a href="profile.html">プロフィール</a></li>
+          <li><a href="top/index.html" aria-current="page">トップ</a></li>
+          <li><a href="list/index.html">記事一覧</a></li>
+          <li><a href=profile/"index.html">プロフィール</a></li>
         </ul>
         <a class="btn btn--primary btn--s" href="#" data-contact>お仕事の相談をする</a>
       </nav>
@@ -43,9 +43,9 @@
     <!-- SP用ナビ -->
     <nav class="sp-nav sp-only" id="sp-nav" aria-label="メインメニュー" hidden>
       <ul>
-        <li><a href="index.html" aria-current="page">トップ</a></li>
-        <li><a href="articles.html">記事一覧</a></li>
-        <li><a href="profile.html">プロフィール</a></li>
+        <li><a href="top/index.html" aria-current="page">トップ</a></li>
+        <li><a href="list/index.html">記事一覧</a></li>
+        <li><a href="profile/index.html">プロフィール</a></li>
       </ul>
     </nav>
   </header>
